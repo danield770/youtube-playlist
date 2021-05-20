@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import PlayList from './Components/PlayList';
+import Video from './Components/Video';
+import styled from 'styled-components';
+
+const StyledMain = styled.main`
+  width: 90vw;
+  height: 90vh;
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: 1fr 2fr;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <StyledMain>
+      <PlayList />
+      <Video />
+    </StyledMain>
   );
 }
 
