@@ -54,7 +54,7 @@ const StyledButton = styled.button`
 function AddVideo({ addvideo }) {
   const BASEURL = 'https://youtube.googleapis.com/youtube/v3/videos';
   const PART = 'snippet,contentDetails';
-  const KEY = 'AIzaSyAaDeAQGh5X6NRD4OK9iUjRlGnCAWPqEpg';
+  const KEY = process.env.REACT_APP_YOUTUBE_API_KEY;
 
   const [formValue, setFormValue] = useState('');
   const [url, setUrl] = useState('');
