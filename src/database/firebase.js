@@ -27,6 +27,7 @@ export const addVideo = async ({
     youtubeId,
     duration,
     timestamp,
+    visibility: 'public',
   });
 };
 
